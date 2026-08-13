@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import TodoForm from './components/TodoForm'
 import TodoItem  from './components/TodoItem'
-import TodoContext, { TodoProvider } from './context/TodoContext'
+import TodoContext from './context/TodoContext'
 import TodoContextProvider from './context/TodoContextProvider'
 import { useTodo } from './context/TodoContext'
 

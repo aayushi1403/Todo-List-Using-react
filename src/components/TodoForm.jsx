@@ -1,6 +1,8 @@
 import { Calendar, Flag, Plus } from "lucide-react";
-
+import { useTodo } from "../context/TodoContext";
 export default function TodoForm() {
+  const {addTodo}=useTodo();
+  
   return (
     <form className="flex items-center gap-3 bg-zinc-900 border border-zinc-800 rounded-xl p-3 shadow-lg">
 
