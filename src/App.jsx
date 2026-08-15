@@ -8,7 +8,7 @@ import { useTodo } from './context/TodoContext'
 function App() {
  const { todos } = useTodo();
   return (
-    <TodoContextProvider>
+    
     <div className="min-h-screen bg-black flex justify-center py-10">
       <div className="w-full max-w-3xl px-4 space-y-4">
      <TodoForm/>
@@ -21,7 +21,6 @@ function App() {
      
      </div>
      </div>
-    </TodoContextProvider>
   )
 }
 

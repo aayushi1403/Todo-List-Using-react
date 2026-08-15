@@ -7,10 +7,10 @@ const TodoContext=createContext({
   }],
   addTodo:(todo)=>{},
   deleteTodo:(id)=>{},
-  updateTodo:(id,textMsg)=>{},
+  updateTodo:(id,todo)=>{},
   completeTodo:(id)=>{},
 })
 export const useTodo=()=>{
-  return useContext()
+  return useContext(TodoContext)
 }
 export default TodoContext;

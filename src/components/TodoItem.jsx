@@ -1,6 +1,11 @@
 import { Circle, Pencil, Trash2 } from "lucide-react";
+import { useState } from "react";
+import { useTodo } from "../context/TodoContext";
+export default function TodoItem({todo}) {
 
-export default function TodoItem() {
+
+  const {completeTodo,updateTodo,deleteTodo}=useTodo();
+
   return (
     <div className="flex items-center justify-between bg-zinc-900 border border-zinc-800 rounded-xl px-5 py-4 hover:bg-zinc-800 transition">
 
@@ -11,7 +16,7 @@ export default function TodoItem() {
         </button>
 
         <span className="text-lg text-white">
-          Design new landing page
+          {todo.textMsg}
         </span>
       </div>
 
