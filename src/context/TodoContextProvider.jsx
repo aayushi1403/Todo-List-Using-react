@@ -1,8 +1,17 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState ,useEffect} from 'react'
 import TodoContext from './TodoContext'
 const TodoContextProvider=({children})=> {
-   const [todos, settodos] = useState([])
+   const [todos, settodos] = useState(() => {
+    const savedTodos = localStorage.getItem("todos");
+
+    return savedTodos ? JSON.parse(savedTodos) : [];
+  });
+
+  // Save todos whenever they change
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
   
   //addTodo
   const addTodo=(todo)=>{
